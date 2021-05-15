@@ -121,19 +121,8 @@ function username(){
 function mobilevalidate()
 {
     var mobile = document.getElementById("mobile").value;
-    if(mobile.length > 10 ){
-        document.getElementById("mobilefield").innerHTML="more than 10 digits are not allowed";
-        return false;
-    }else{
-        document.getElementById("mobilefield").innerHTML="";
-    }
-    if(mobile.length < 10){
-        document.getElementById("mobilefield").innerHTML="number should be of 10 digits";
-    }else{
-        document.getElementById("mobilefield").innerHTML="";
-    }
-    if(isNaN(mobile)){
-        document.getElementById("mobilefield").innerHTML="only numbers are allowed";
+    if((mobile.length > 10 ) || (mobile.length < 10) || (isNaN(mobile))) {
+        document.getElementById("mobilefield").innerHTML="please enter correct mobile number";
         return false;
     }else{
         document.getElementById("mobilefield").innerHTML="";
