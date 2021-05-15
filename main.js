@@ -7,53 +7,7 @@ function validateform(){
     var words = bio.split(' ');
     var gender = document.getElementById("gender").value;
     
-    if(name.length > 20){
-        document.getElementById("namefield").innerHTML="cannot exceed from 20 character";
-        return false;
-    }else{
-        document.getElementById("namefield").innerHTML="";
-    }
-    if (/[^a-zA-Z0-9 \-\/]/.test(name)){
-        document.getElementById("namefield").innerHTML="special character not allowed";
-        return false;
-    }else{
-        document.getElementById("namefield").innerHTML="";
-    }
-    if(mobile.length > 10 ){
-        document.getElementById("mobilefield").innerHTML="more than 10 digits are not allowed";
-        return false;
-    }else{
-        document.getElementById("mobilefield").innerHTML="";
-    }
-    if(mobile.length < 10){
-        document.getElementById("mobilefield").innerHTML="number should be of 10 digits";
-    }else{
-        document.getElementById("mobilefield").innerHTML="";
-    }
-    if(isNaN(mobile)){
-        document.getElementById("mobilefield").innerHTML="only numbers are allowed";
-        return false;
-    }else{
-        document.getElementById("mobilefield").innerHTML="";
-    }
-    if(email.indexOf('@') <= 0){
-        document.getElementById("emailfield").innerHTML="email format is not valid";
-        return false
-    }else{
-        document.getElementById("emailfield").innerHTML="";
-    }
-    if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
-        document.getElementById("emailfield").innerHTML="email format is not valid";
-        return false;
-    }else{
-        document.getElementById("emailfield").innerHTML="";
-    }
-    if(words.length > 60){
-        document.getElementById("biofield").innerHTML="textarea should not contain more than 60 words";
-        return false;
-    }else{
-        document.getElementById("biofield").innerHTML=""; 
-    }
+    
     let formdata = {
         name: document.getElementById("name").value,
         mobile: document.getElementById("mobile").value,
